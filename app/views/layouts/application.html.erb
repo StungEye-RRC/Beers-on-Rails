@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <%= form_tag(search_results_path, method: "get") do %>
+      <%= label_tag(:q, "Search for:") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+    <!--
+      When the form is submitted with the input as "test query" it results in:
+      /search_results?utf8=%E2%9C%93&q=test+query&commit=Search
+    -->
+
     <%= yield %>
   </body>
 </html>

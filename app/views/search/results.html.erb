@@ -1,2 +1,12 @@
-<h1>Search#results</h1>
-<p>Find me in app/views/search/results.html.erb</p>
+<h1>Search Results</h1>
+
+<h2>Your query for "<%= @query %>" returned <%= pluralize(@beers.size, 'result') %>.</h2>
+
+<% @beers.each do |beer| %>
+  <div class="beer">
+    <h3><%= beer.name %></h3>
+    <p>Price: <%= number_to_currency beer.price %></p>
+    <p>Alcohol: <%= beer.alcohol %></p>
+    <p>IBU: <%= beer.ibu %></p>
+  </div>
+<% end %>
