@@ -3,7 +3,7 @@
 <% @beers.each do |beer| %>
   <div class="beer">
     <h3><%= beer.name %></h3>
-    <p>Price: <%= beer.price %></p>
+    <p>Price: <%= number_to_currency beer.price %></p>
     <p>Alcohol: <%= beer.alcohol %></p>
     <p>IBU: <%= beer.ibu %></p>
   </div>
