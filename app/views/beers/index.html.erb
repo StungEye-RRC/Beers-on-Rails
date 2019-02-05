@@ -1,10 +1,7 @@
 <h1>Tasty Beers For Sale</h1>
 
-<% @beers.each do |beer| %>
-  <div class="beer">
-    <h3><%= beer.name %></h3>
-    <p>Price: <%= number_to_currency beer.price %></p>
-    <p>Alcohol: <%= beer.alcohol %></p>
-    <p>IBU: <%= beer.ibu %></p>
-  </div>
-<% end %>
+<%= render @beers %>
+
+<!-- render partial: 'beers/beer',
+            collection: @beers,
+            locals: {show_links: true } -->
