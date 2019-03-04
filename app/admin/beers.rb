@@ -1,3 +1,3 @@
 ActiveAdmin.register Beer do
-  permit_params :name, :alcohol, :ibu, :price
+  permit_params :name, :alcohol, :ibu, :price, :category_id
 end
