@@ -2,6 +2,6 @@
 
 <h2>Your query for "<%= @query %>" returned <%= pluralize(@beers.size, 'result') %>.</h2>
 
-<%= render @beers %>
-
-<!-- render partial: 'beers/beer', collection: @beers -->
+<%= render partial: 'beers/beer',
+            collection: @beers,
+            locals: {show_links: true } %>
