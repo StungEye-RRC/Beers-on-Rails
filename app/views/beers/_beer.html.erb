@@ -4,6 +4,7 @@
   <% else %>
     <h3><%= beer.name %></h3>
   <% end %>
+  <p>Category: <%= beer.category.name %></p>
   <p>Price: <%= number_to_currency beer.price %></p>
   <p>Alcohol: <%= beer.alcohol %></p>
   <p>IBU: <%= beer.ibu %></p>
