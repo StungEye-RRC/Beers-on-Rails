@@ -9,6 +9,6 @@
   <p>Alcohol: <%= beer.alcohol %></p>
   <p>IBU: <%= beer.ibu %></p>
   <% if beer.image? %>
-    <p><%= image_tag beer.image, width: 200 %></p>
+    <p><%= image_tag beer.image.thumbnail.url %></p>
   <% end %>
 </div>
