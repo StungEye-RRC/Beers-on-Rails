@@ -8,4 +8,7 @@
   <p>Price: <%= number_to_currency beer.price %></p>
   <p>Alcohol: <%= beer.alcohol %></p>
   <p>IBU: <%= beer.ibu %></p>
+  <% if beer.image? %>
+    <p><%= image_tag beer.image, width: 200 %></p>
+  <% end %>
 </div>
